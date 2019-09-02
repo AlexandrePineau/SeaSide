@@ -1,0 +1,76 @@
+<html>
+<head>
+    <title>SeaSide</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <script>
+        function morning(){
+            document.getElementById("credits").style.color = "black";
+            var x = document.getElementsByTagName("BODY")[0];
+            x.style.backgroundColor = "#C7F1FF";
+        }
+        function noon(){
+            document.getElementById("credits").style.color = "black";
+            var x = document.getElementsByTagName("BODY")[0];
+            x.style.backgroundColor = "#6BB3F2";
+        }
+        function evening(){
+            document.getElementById("credits").style.color = "black";
+            var x = document.getElementsByTagName("BODY")[0];
+            x.style.backgroundColor = "purple";
+        }
+        function night(){
+            document.getElementById("credits").style.color = "white";
+            var x = document.getElementsByTagName("BODY")[0];
+            x.style.backgroundColor = "black";
+        }
+
+        function wavesBirds(){
+            document.getElementById("player").src = "Audio\wavesBirds.mp3";
+        }
+
+
+        function rain(){
+            document.getElementById("player").src = "Audio\rain.mp3";
+        }
+
+        function rainStorm(){
+            document.getElementById("player").src = "Audio\rainStorm.mp3";
+        }
+
+        function none(){
+            document.getElementById("player").src = "";
+        }
+    </script>
+</head>
+<body>
+
+    <audio id="player" controls autoplay loop>
+        <source id="song" src="Audio\wavesBirds.mp3">
+    </audio>
+
+    <div id="menu">
+        <h1>
+            Time Of Day
+        </h1>
+        <button class="time" onclick="morning()">Morning</button>
+        <button class="time" onclick="noon()">Noon</button>
+        <button class="time" onclick="evening()">Evening</button>
+        <button class="time" onclick="night()">Night</button>
+        <h1>
+            Audio Track
+        </h1>
+        <button class="audio" onclick="wavesBirds()">Waves + Birds</button>
+        <button class="audio" onclick="rain()">Rain</button>
+        <button class="audio" onclick="rainStorm()">Storm</button>
+        <button class="audio" onclick="none()">None</button>
+    </div>
+
+    <div class="sun">
+    </div>
+    <div class="water">
+    </div>
+
+    <p id="credits">Created by Alexandre Pineau</p>
+</body>
+</html>
